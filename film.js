@@ -14,7 +14,7 @@ async function getFilm(id) {
     try {
         film = await fetchFilm(id);
         film.characters = await fetchCharacters(id);
-        film.planets =await fetchPlanets(id);
+        film.planets = await fetchPlanets(id);
     }
     catch (ex) {
         console.error(`Error reading film ${id} data.`, ex.message);
